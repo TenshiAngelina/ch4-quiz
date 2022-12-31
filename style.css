@@ -1,0 +1,29 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+body {
+  padding: 2px 8px;
+  display: flex;
+  background-color: aliceblue;
+  width: 100%;
+  height: 100%;
+}
+
+.answers-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.btn {
+  background-color: darkslateblue;
+  color: aliceblue;
+  border-radius: 5px;
+  padding: 7px;
+  font-size: medium;
+}
+
+

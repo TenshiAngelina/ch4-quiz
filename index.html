@@ -4,21 +4,25 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="/reset.css">
   <link rel="stylesheet" href="/style.css">
   <title>JavaScript quiz</title>
 </head>
 <body>
-  <main>
-    <div>
-      <ul>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-      </ul>
+  <main class="main-container">
+    <div id="questions-container">
+      <div id="question">Question</div>
+      <div id="answers-container" class="answers-container">
+        <button class="btn" id="answer-one">Answer 1</button>
+        <button class="btn" id="answer-two">Answer 2</button>
+        <button class="btn" id="answer-three">Answer 3</button>
+        <button class="btn" id="answer-four">Answer 4</button>
+      </div>
+    </div>
+    <div class=start-container>
+      <button id="start-btn" class="start-btn btn hide">Start</button>
     </div>
   </main>
+
   <script src="/script.js"></script>
 </body>
 </html>
