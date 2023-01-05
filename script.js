@@ -11,8 +11,51 @@
 // THEN I can save my initials and my score
 
 var start = document.getElementById("start-btn");
-var 
+start.addEventListener("click", startQuiz);
+var timerEl = document.getElementById("timer");
+var secondsLeft = 60;
+var score = 0;
+var question = document.getElementById("question");
+var answers = document.getElementsByClassName
+//Variable that contains an object with questions and answers for the quiz
+var questionsAndAnswers = [
+  {
+    title: "Random question",
+    answers: ["Answer1", "Answer2", "Answer3", "Answer4"],
+    rightAnswer: "Answer1"
+  },
+  {
+    title: "Random question",
+    answers: ["Answer1", "Answer2", "Answer3", "Answer4"],
+    rightAnswer: "Answer1"
+  },  {
+    title: "Random question",
+    answers: ["Answer1", "Answer2", "Answer3", "Answer4"],
+    rightAnswer: "Answer1"
+  },  {
+    title: "Random question",
+    answers: ["Answer1", "Answer2", "Answer3", "Answer4"],
+    rightAnswer: "Answer1"
+  },  
+];
 
-function startQuiz() {}
+//Set timer function
+function setTime() {
+  var timerInterval = setInterval(function() {
+      secondsLeft--;
+    timerEl.textContent = secondsLeft + " seconds left";
+    if(secondsLeft === 0) {
+      clearInterval(timerInterval);
+    }
+  }, 1000);
+}
 
-function selectAnswer() {}
+//Start timer when Start button is clicked and hides Start button
+function startQuiz() {
+  setTime();
+  start.classList.add("hide");
+}
+
+function selectAnswer() {
+  
+}

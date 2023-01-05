@@ -9,18 +9,30 @@
 </head>
 <body>
   <main class="main-container">
+
+    <div id="timer-container">
+      <div id="timer"></div>
+    </div>
+    
     <div id="questions-container">
       <div id="question">Question</div>
-      <div id="answers-container" class="answers-container">
-        <button class="btn" id="answer-one">Answer 1</button>
-        <button class="btn" id="answer-two">Answer 2</button>
-        <button class="btn" id="answer-three">Answer 3</button>
-        <button class="btn" id="answer-four">Answer 4</button>
       </div>
+
+    <div id="answers-container" class="answers-container">
+      <button class="btn" class="answer-btn" id="answer-one">Answer 1</button>
+      <button class="btn" class="answer-btn" id="answer-two">Answer 2</button>
+      <button class="btn" class="answer-btn" id="answer-three">Answer 3</button>
+      <button class="btn" class="answer-btn" id="answer-four">Answer 4</button>
     </div>
-    <div class=start-container>
-      <button id="start-btn" class="start-btn btn hide">Start</button>
+
+    <div id=start-container>
+      <button id="start-btn" class="start-btn btn">Start</button>
     </div>
+
+    <div id="result-container">
+      <div id="result">Your score is</div>
+    </div>
+
   </main>
 
   <script src="/script.js"></script>
