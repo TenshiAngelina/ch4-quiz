@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="/style.css">
+  <link rel="stylesheet" href="style.css">
   <title>JavaScript quiz</title>
 </head>
 <body>
@@ -19,10 +19,10 @@
       </div>
 
     <div id="answers-container" class="answers-container">
-      <button class="btn answer-btn" id="answer-btn"></button>
-      <button class="btn answer-btn" id="answer-btn"></button>
-      <button class="btn answer-btn" id="answer-btn"></button>
-      <button class="btn answer-btn" id="answer-btn"></button>
+      <button class="btn answer-btn" id="answer-btn1" onclick="selectAnswer(event)"></button>
+      <button class="btn answer-btn" id="answer-btn2" onclick="selectAnswer(event)"></button>
+      <button class="btn answer-btn" id="answer-btn3" onclick="selectAnswer(event)"></button>
+      <button class="btn answer-btn" id="answer-btn4" onclick="selectAnswer(event)"></button>
     </div>
 
     <div id=start-container>
@@ -30,7 +30,7 @@
     </div>
 
     <div id="result-container">
-      <div id="result" class="hide">Your score is</div>
+      <div id="result"></div>
     </div>
 
   </main>
