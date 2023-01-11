@@ -5,9 +5,9 @@ var startContainer = document.getElementById("start-container");
 var start = document.getElementById("start-btn");
 start.addEventListener("click", startQuiz);
 var timerEl = document.getElementById("timer");
+var question = document.getElementById("question");
 var secondsLeft = 60;
 var score = 0;
-var question = document.getElementById("question");
 var counter = 0;
 var resultContainer = document.getElementById("result-container");
 var answer1 = document.getElementById("answer-btn1");
@@ -36,15 +36,14 @@ var questionsAndAnswers = [
 function askInitials() {
   var initials = prompt("Type your initials");
   var scoreBoard = document.getElementById("result");
-  scoreBoard.innerText = initials.text + " your score is " + score;
+  scoreBoard.innerHTML = initials + " your score is " + score;
 }
-//Hide all answers and then 
+//Hide all answers and then calls for the function with the prompt
 function gameOver() {
   timerContainer.classList.add("hide");
   questionContainer.classList.add("hide");
   answerContainer.classList.add("hide");
   startContainer.classList.add("hide");
-  resultContainer.classList.add("btn");
   askInitials();
 }
 //Set timer function
