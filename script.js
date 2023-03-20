@@ -32,11 +32,12 @@ var questionsAndAnswers = [
     rightAnswer: "push"
   },
 ];
-//Ask for the user's initials and shows their score
+//Ask for the user's initials and shows their score, saves the initials and score in Local Storage
 function askInitials() {
   var initials = prompt("Type your initials");
   var scoreBoard = document.getElementById("result");
   scoreBoard.innerHTML = initials + " your score is " + score;
+  localStorage.setItem(initials, score);
 }
 //Hide all answers and then calls for the function with the prompt
 function gameOver() {
@@ -76,19 +77,16 @@ function currentQuestion() {
 function selectAnswer(event) {
   console.log(counter);
   console.log(questionsAndAnswers.length);
+  var currentAnswer = event.target.textContent;
+  if(currentAnswer === questionsAndAnswers[counter].rightAnswer) {
+    score += 1;
+  } else {
+    secondsLeft -= 10;
+  }
   if(counter === questionsAndAnswers.length-1) {
     gameOver();
-  } else {
-    var currentAnswer = event.target.textContent;
-    if(currentAnswer === questionsAndAnswers[counter].rightAnswer) {
-      counter++;
-      score += 1;
-      currentQuestion();
-    } else {
-      secondsLeft -= 10;
-      counter++;
-      currentQuestion();
-    };
+    return;
   }
+  counter++;
+  currentQuestion();
 };
-
